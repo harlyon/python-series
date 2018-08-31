@@ -43,7 +43,7 @@
     <h2>Latest Posts</h2>
     <hr />
 
-    {% for blog in blogs.all %}
+    {% for blog in blog.all %}
     <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
     {{ blog.pub_date_pretty }}
     <br />
