@@ -38,14 +38,14 @@
     <div class="container">
 
     <h1 class="text-center pt-3">Welcome to ModSquad's Blog</h1>
-    <br />
+    <br /
     <br />
     <h2>Latest Posts</h2>
     <hr />
 
-    {% for blog in blog.all %}
+    {% for blog in blogs.all %}
     <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
-    {{ blog.pub_date_pretty }}
+    {{ blog.publishedDate }}
     <br />
     <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
     <br />
